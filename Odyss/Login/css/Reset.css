@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #ffeba7;
+  background-color: #1f2029;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.link {
+  color: #ffeba7;
+}
+
+.link:hover {
+  color: #c4c3ca;
+}
+
+p {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+h6 span {
+  padding: 0 20px;
+  font-weight: 700;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+/* Custom checkbox styling */
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: #ffeba7;
+}
+
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before {
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #ffeba7;
+  background-color: #020305;
+  font-family: 'unicons';
+  content: '\eb4f';
+  z-index: 20;
+  top: -10px;
+  left: -10px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.center-wrap {
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+  display: block;
+}
+
+.form-group {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.form-style {
+  padding: 13px 20px;
+  padding-left: 55px;
+  height: 48px;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  border: none;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px rgba(21, 21, 21, 0.2);
+}
+
+.form-style:focus,
+.form-style:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(21, 21, 21, 0.2);
+}
+
+.input-icon {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: left;
+  transition: all 200ms linear;
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffeba7;
+  color: #000000;
+}
+
+.btn:hover{
+  background-color: #000000;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px rgba(16, 39, 112, 0.2);
+}
+
+/* Ensure input looks like a button */
+#login-btn {
+  border-radius: 50px;
+  width: 120px;  /* Définit une largeur spécifique */
+  height: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 200ms ease;
+  padding: 0 20px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffeba7;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-container {
+  position: relative;
+  width: 300px; /* Augmenter la largeur de la zone de déplacement */
+  height: 50px; /* Ajustez la hauteur en fonction de votre besoin */
+  overflow: visible; /* Masque tout ce qui dépasse de la zone de conteneur */
+  margin: 0 auto;
+  transition: all 200ms ease;
+}
+
+/* Styles généraux du formulaire */
+form {
+  background-color: #2b2e38;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* Labels */
+form label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffeba7;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Champs de saisie */
+.form-control {
+  background-color: #1f2029;
+  color: #c4c3ca;
+  border: none;
+  padding: 12px 20px;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Champs de saisie en focus */
+.form-control:focus {
+  border-color: #ffeba7;
+  box-shadow: 0 0 8px rgba(255, 235, 167, 0.5);
+  outline: none;
+}
+
+#login-btn {
+  border-radius: 50px;
+  margin: 25px 0;
+  width: 120px;  /* Définit une largeur spécifique */
+  height: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 200ms ease;
+  padding: 0 20px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffeba7;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hover effect for input button */
+#login-btn:hover {
+  background-color: #000000;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px rgba(16, 39, 112, 0.2);
+}
+
+/* Bouton Envoyer le code */
+.btn-primary {
+  background-color: #ffeba7;
+  color: #000000;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Effet sur le bouton au survol */
+.btn-primary:hover {
+  background-color: #000000;
+  color: #ffeba7;
+  box-shadow: 0 4px 16px rgba(16, 39, 112, 0.2);
+}
