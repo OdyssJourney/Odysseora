@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    
+    <!-- =============== Navigation ================ -->
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="#" class="menu-item" data-target="dashboard">
+                    <span class="title">Odyss</span>
+                </a>
+            </li>
+
+            <li class="active"> <!-- Ajout de la classe "active" pour le Dashboard -->
+                <a href="#" class="menu-item" data-target="dashboard">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Dashboard</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#" class="menu-item" data-target="notifications">
+                    <span class="icon">
+                        <ion-icon name="chatbubble-outline"></ion-icon>
+                        <span id="notification-bubble" class="notification-bubble hidden">0</span>
+                    </span>
+                    <span class="title">Notifications</span>
+                </a>
+            </li>
+            
+
+            <li>
+                <a href="#" class="menu-item" data-target="compte-rendu">
+                    <span class="icon"><ion-icon name="document-text-outline"></ion-icon></span>
+                    <span class="title">Compte Rendu</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-item" data-target="business-model">
+                    <span class="icon"><ion-icon name="briefcase-outline"></ion-icon></span>
+                    <span class="title">Business Model</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-item" data-target="ressources">
+                    <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                    <span class="title">Ressources</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-item" data-target="parametres">
+                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="title">Paramètres</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="title">Se déconnecter</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+              
+
+                <div class="user">
+                    <img id="profile-pic" src="assets/imgs/customer01.jpg" alt="Photo de profil">
+                    <input type="file" id="profile-upload" accept="image/*" hidden>
+                </div>
+                
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div id="dashboard" class="content-section active">
+               
+            
+                <!-- ============== Cards Section ============== -->
+                <div class="cardBox">
+                    <div class="card">
+                        <div>
+                            <div class="numbers"><a href="#chatbot">Chatbot</a></div>
+                            <div class="cardName">Chatbot</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div>
+                            <div class="numbers"><a href="#aides-subventions">Aides et Subventions</a></div>
+                            <div class="cardName">Aides et Subventions</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div>
+                            <div class="numbers"><a href="#conformite-legale">Conformité Légale</a></div>
+                            <div class="cardName">Conformité Légale</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- ================ Order Details List ================= -->
+                <div class="details">
+                    <div class="recentOrders">
+                        <div class="cardHeader">
+                            <h2>Recent Projects</h2>
+                            <a href="#" class="btn">View All</a>
+                        </div>
+            
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Project Name</td>
+                                    <td>Date</td>
+                                    <td>Status</td>
+                                    <td>Completion</td>
+                                </tr>
+                            </thead>
+            
+                            <tbody>
+                                <tr>
+                                    <td>Tech Startup</td>
+                                    <td>01/03/2025</td>
+                                    <td><span class="status inProgress">In Progress</span></td>
+                                    <td><span class="status notCompleted">Not Completed</span></td>
+                                </tr>
+            
+                                <tr>
+                                    <td>E-commerce Platform</td>
+                                    <td>15/02/2025</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                    <td><span class="status completed">Completed</span></td>
+                                </tr>
+            
+                                <tr>
+                                    <td>Mobile App</td>
+                                    <td>20/01/2025</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td><span class="status notStarted">Not Started</span></td>
+                                </tr>
+            
+                                <tr>
+                                    <td>Green Energy</td>
+                                    <td>10/02/2025</td>
+                                    <td><span class="status inProgress">In Progress</span></td>
+                                    <td><span class="status notCompleted">Not Completed</span></td>
+                                </tr>
+            
+                                <tr>
+                                    <td>Social Network</td>
+                                    <td>05/01/2025</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                    <td><span class="status completed">Completed</span></td>
+                                </tr>
+            
+                                <tr>
+                                    <td>AI Tool</td>
+                                    <td>12/02/2025</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                    <td><span class="status notStarted">Not Started</span></td>
+                                </tr>
+            
+                                <tr>
+                                    <td>Fitness Tracker</td>
+                                    <td>28/01/2025</td>
+                                    <td><span class="status inProgress">In Progress</span></td>
+                                    <td><span class="status notCompleted">Not Completed</span></td>
+                                </tr>
+            
+                                <tr>
+                                    <td>Healthcare App</td>
+                                    <td>10/03/2025</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                    <td><span class="status completed">Completed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <section id="notifications" class="content-section">
+                <h1>🔔 Tour de Guet</h1>
+                <p>Reste à l'affût des derniers signaux !</p>
+                
+                <div id="notification-container">
+                    <p class="empty-msg">Aucune notification pour le moment.</p>
+                </div>
+            
+                <button id="add-notification" class="btnotif">📜 Nouvelle Notification</button>
+            </section>
+            <section id="compte-rendu" class="content-section">
+                <h1>📜 Parchemins Sacrés</h1>
+                <p>Clique sur un parchemin pour révéler son contenu.</p>
+            
+                <div class="parchment-container">
+                    <div class="parchment">
+                        <p class="parchment-text">"Voici le résumé de ton voyage..."</p>
+                    </div>
+                </div>
+            
+                <button id="download-report" class="btnotif">📥 Télécharger le Rapport</button>
+            </section>
+            
+                
+            <section id="business-model" class="content-section">
+                <h1>🏛️ Cité des Sages</h1>
+                <p>Développe ta cité en complétant chaque étape de ton business model.</p>
+            
+                <div class="city-container">
+                    <div class="city">
+                        <div class="building" id="building1">🏗️ Fondation</div>
+                        <div class="building locked" id="building2">⛩️ Marché</div>
+                        <div class="building locked" id="building3">🏦 Banque</div>
+                        <div class="building locked" id="building4">🏛️ Temple du Leadership</div>
+                        <div class="building locked" id="building5">🎭 Théâtre de la Marque</div>
+                    </div>
+                </div>
+            
+                <button id="unlock-building" class="btnotif">🔓 Débloquer un Bâtiment</button>
+            </section>
+            
+            <section id="ressources" class="content-section">
+                <h1>📚 La Grande Bibliothèque</h1>
+                <p>Explore les ressources pour enrichir ton savoir.</p>
+            
+                <div class="library">
+                    <div class="book" id="book1">
+                        <div class="cover">📖 <span>Stratégie Business</span></div>
+                        <div class="content">Un guide complet sur la stratégie d’entreprise.</div>
+                    </div>
+            
+                    <div class="book" id="book2">
+                        <div class="cover">🎓 <span>Formation Expert</span></div>
+                        <div class="content">Une formation détaillée pour structurer ton projet.</div>
+                    </div>
+            
+                    <div class="book" id="book3">
+                        <div class="cover">🛠️ <span>Outils & Modèles</span></div>
+                        <div class="content">Des outils pratiques pour optimiser ton business.</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="parametres" class="content-section">
+                <h1>⚙️ La Forge du Forgeron</h1>
+                <p>Ajuste les réglages et façonne ton expérience.</p>
+            
+                <!-- Informations du Compte -->
+                <div class="settings-group">
+                    <h2>👤 Informations du Compte</h2>
+                    <label>Nom : <input type="text" id="username" placeholder="Entrez votre nom"></label>
+                    <label>Email : <input type="email" id="email" placeholder="Entrez votre email"></label>
+                    <label>Mot de passe : <input type="password" id="password"></label>
+                    <button id="update-account">Mettre à jour</button>
+                </div>
+            
+                <!-- Préférences de Communication -->
+                <div class="settings-group">
+                    <h2>📩 Préférences de Communication</h2>
+                    <label><input type="checkbox" id="notif-chat"> Notifications de chat</label>
+                    <label><input type="checkbox" id="notif-updates"> Mises à jour</label>
+                    <label for="language">🌍 Langue :</label>
+                    <select id="language">
+                        <option value="fr">Français</option>
+                        <option value="en">Anglais</option>
+                    </select>
+                </div>
+            
+                <!-- Confidentialité & Sécurité -->
+                <div class="settings-group">
+                    <h2>🔒 Confidentialité & Sécurité</h2>
+                    <label><input type="checkbox" id="data-sharing"> Partage de données autorisé</label>
+                    <label><input type="checkbox" id="two-factor-auth"> Authentification à deux facteurs</label>
+                </div>
+            
+                <!-- Abonnements et Services -->
+                <div class="settings-group">
+                    <h2>💳 Abonnement & Services</h2>
+                    <p>Vous êtes actuellement sur l’offre <strong>Gratuite</strong>.</p>
+                    <button id="upgrade-plan">Passer à Premium</button>
+                </div>
+            
+                <!-- Paramètres de l'IA -->
+                <div class="settings-group">
+                    <h2>🤖 Paramètres de l'IA</h2>
+                    <label for="ai-tone">🎤 Ton de l'IA :</label>
+                    <select id="ai-tone">
+                        <option value="formel">Formel</option>
+                        <option value="neutre">Neutre</option>
+                        <option value="casual">Décontracté</option>
+                    </select>
+                </div>
+            
+                <!-- Historique et Activité -->
+                <div class="settings-group">
+                    <h2>📜 Historique & Activité</h2>
+                    <button id="clear-history">Effacer l'historique</button>
+                </div>
+            
+                <!-- Mode Nuit & Sons -->
+                <div class="settings-group">
+                    <h2>⚙️ Paramètres Généraux</h2>
+                    <label><input type="checkbox" id="dark-mode-toggle"> 🌙 Mode Nuit</label>
+                    <label><input type="checkbox" id="sound-toggle"> 🔊 Sons activés</label>
+                </div>
+            
+                <!-- Déconnexion et suppression de compte -->
+                <div class="settings-group danger-zone">
+                    <h2>🚨 Actions Critiques</h2>
+                    <button id="logout">Se Déconnecter</button>
+                    <button id="delete-account" class="danger">Supprimer le Compte</button>
+                </div>
+            </section>
+            
+                
+            </div>
+            
+           
+             
+               
+      
+            
+
+    <!-- =========== Scripts =========  -->
+    <script src="main.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</div> <!-- Fin de .main -->
+</body>
+</html>
