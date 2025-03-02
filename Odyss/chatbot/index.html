@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odyss Chatbot 2.0 🌌🚀</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Bouton pour ouvrir la sidebar -->
+    <button id="toggleSidebar" class="toggle-sidebar-btn">📜 Historique</button>
+  
+    <!-- Bouton pour rouvrir la sidebar (caché par défaut) -->
+    <button id="openSidebarBtn" class="open-sidebar-btn hidden">📜 Ouvrir l'historique</button>
+  
+    <!-- Sidebar contenant l'historique -->
+    <div id="sidebar" class="sidebar">
+      <button id="closeSidebar" class="close-sidebar-btn">❌</button>
+      <h2>🕰️ Historique des Chats</h2>
+      <ul id="chatHistoryList"></ul>
+      <button id="newChatBtn" class="new-chat-btn">🆕 Nouveau Chat</button>
+    </div>
+  
+    <!-- Contenu du chatbot -->
+    <div id="chatbot" class="chatbot">
+      <div class="header">
+        <h1>🚀 Bienvenue dans l'Odyssée Entrepreneuriale</h1>
+      </div>
+  
+      <div class="conversation">
+        <div class="suggestions">
+          <button class="floating-bubble" onclick="navigateTo('idee.html')">💡 Décrire mon idée</button>
+          <button class="floating-bubble" onclick="navigateTo('aides.html')">🚀 Explorer des aides</button>
+          <button class="floating-bubble" onclick="navigateTo('inspiration.html')">🔥 Besoin d'inspiration</button>
+          <button class="floating-bubble" onclick="navigateTo('conformite.html')">📜 Conformité Légale</button>
+        </div>
+  
+        <div class="messages" id="messages"></div>
+  
+        <div class="input-area">
+          <input type="text" id="userInput" placeholder="💬 Posez votre question ici..." onkeypress="checkEnter(event)">
+          <button id="sendBtn" onclick="sendMessage()">Envoyer 🚀</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script src="script.js"></script>
+<script src="confetti.js"></script>
+</body>
+</html>

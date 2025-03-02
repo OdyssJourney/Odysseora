@@ -1,0 +1,569 @@
+/* Importation de police futuriste */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Styles généraux */
+body {
+    background: radial-gradient(circle, rgba(17, 24, 39, 0.9), #1E1E2E);
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    display: justify;
+    justify-content: center;
+  }
+  .chatbot {
+    padding: 50px;
+    text-align: center;
+  }
+  h1 {
+    text-shadow: 0 0 15px #72D7FF;
+    margin-bottom: 10px;
+  }
+  .suggestions{
+    margin-bottom: 15px;
+    margin-top: 25px;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background: #72D7FF;
+    box-shadow: 0 0 20px #72D7FF;
+    transform: scale(1.05) rotate(3deg);
+  }
+  
+  input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    text-align: center;
+    outline: none;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  input:focus {
+    box-shadow: 0 0 20px #A1FFCE;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  
+  .floating-bubble {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(114, 215, 255, 0.4);
+    transition: 0.3s ease;
+    text-align: center;
+  }
+  
+  .floating-bubble:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 0 30px rgba(114, 215, 255, 0.8);
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(2deg);
+    }
+  }
+  
+  /* Style général du champ de texte */
+#userInput {
+    width: 100%;
+    max-width: 600px;
+    padding: 16px 25px;
+    font-size: 18px;
+    font-family: 'Cursive', 'Poppins', sans-serif;
+    color: #fff;
+    background-color: transparent; /* Crème clair avec une touche dorée */
+    border: 2px solid rgba(15, 20, 50, 0.9); /* Bordure légère et élégante */
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+    outline: none;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(15, 20, 50, 0.9); /* Ombre légère pour donner de la profondeur */
+  }
+  
+  /* Placeholder personnalisé */
+  #userInput::placeholder {
+    color: #C5A88D; /* Gris doré - subtil et élégant */
+    font-style: italic;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Effet au focus - effet doré mystique */
+  #userInput:focus {
+    border-color: rgba(15, 20, 50, 0.9);/* Un doré chaleureux */
+    background-color:rgba(15, 20, 50, 0.9); /* Effet de lumière douce au focus */
+    box-shadow: 0 4px 20px rgba(255, 184, 77, 0.3); /* Halo doré au focus */
+  }
+  
+  /* Effet de survol - amplifie l'expérience */
+  #userInput:hover {
+    border-color: rgba(15, 20, 50, 0.9);; /* Une nuance dorée pour le survol */
+    background-color: rgba(15, 20, 50, 0.9);; /* Légèrement plus clair */
+    cursor: pointer;
+  }
+  
+  /* Animation subtile de disparition du placeholder au focus */
+  #userInput:focus::placeholder {
+    opacity: 0; /* Disparition du placeholder */
+  }
+  
+  /* Animation de mouvement pour capter l'attention */
+  #userInput {
+    animation: inputFloat 1s ease-in-out;
+  }
+  
+  @keyframes inputFloat {
+    0% {
+      transform: scale(1) translateY(0);
+    }
+    50% {
+      transform: scale(1.05) translateY(-5px);
+    }
+    100% {
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  /* Effet de transition douce lors de la saisie */
+  #userInput:focus {
+    animation: inputGlow 0.3s ease-out;
+  }
+  
+  @keyframes inputGlow {
+    0% {
+      box-shadow: 0 0 5px rgba(59, 59, 58, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(255, 184, 77, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(255, 184, 77, 0.3);
+    }
+  }
+  
+
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 0px 0px 15px #00aaff;
+}
+
+.nav-item {
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #00aaff;
+    padding-left: 10px;
+}
+
+.active {
+    background: rgba(0, 173, 255, 0.3);
+    box-shadow: 0px 0px 15px #00aaff;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+h1 {
+    text-shadow: 0px 0px 10px #00aaff;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 20px rgba(0, 173, 255, 0.3);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px rgba(0, 173, 255, 0.5);
+}
+
+/* Progress Bar */
+.progress-section {
+    margin: 20px 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #222;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 10px rgba(0, 173, 255, 0.4);
+}
+
+.progress-fill {
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, #00aaff, #00ff99);
+    transition: width 0.5s ease-in-out;
+}
+
+/* History */
+.history {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 173, 255, 0.3);
+}
+.messages {
+  display: flex;
+ 
+  width:100%;
+  flex-direction: column;
+  gap: 20px;
+  height: 400px;
+  overflow-y: scroll;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(114, 215, 255, 0.2);
+  scrollbar-width: thin;
+  scrollbar-color: #72D7FF rgba(255, 255, 255, 0.1);
+}
+
+.message-bubble {
+  padding: 15px 20px;
+  border-radius: 25px;
+  max-width: 70%;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(114, 215, 255, 0.4);
+  animation: floatBubble 5s infinite ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.message-user {
+  background: rgba(72, 219, 255, 0.3);
+  align-self: flex-end;
+}
+
+.message-ia {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes floatBubble {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+  .loader {
+    display: inline-block;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+  }
+  
+  .messages::-webkit-scrollbar {
+    width: 12px; /* Épaisseur visible */
+    display: block; /* Force la scrollbar */
+  }
+  
+  .messages::-webkit-scrollbar-track {
+    background: rgba(240, 229, 229, 0.1);
+    border-radius: 10px;
+  }
+  
+  .messages::-webkit-scrollbar-thumb {
+    background: #72D7FF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(114, 215, 255, 0.6);
+    transition: all 0.3s ease;
+  }
+  
+  .messages::-webkit-scrollbar-thumb:hover {
+    background: #A1FFCE;
+    box-shadow: 0 0 20px rgba(161, 255, 206, 0.8);
+  }
+  .page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(114, 215, 255, 0.2), #1E1E2E);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .page-transition.active {
+    pointer-events: all;
+    opacity: 1;
+    animation: teleport 1.5s ease-in-out forwards;
+  }
+  
+  @keyframes teleport {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+      box-shadow: 0 0 50px rgba(114, 215, 255, 0.4);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+      box-shadow: 0 0 100px rgba(114, 215, 255, 0.8);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+  /* Sidebar */
+/* Conteneur principal du chatbot */
+.chat-container {
+  display: flex;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  position: relative;
+}
+
+/* Sidebar (cachée par défaut) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Cachée initialement */
+  width: 250px;
+  height: 100vh;
+  background: rgba(15, 20, 50, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 0px 15px rgba(0, 173, 255, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.open-sidebar-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #72D7FF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(114, 215, 255, 0.6);
+  display: none;
+  z-index: 10;
+}
+
+/* Quand la sidebar est ouverte */
+.chat-container.sidebar-open .chatbot {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+/* Chatbot (zone de discussion) */
+.chatbot {
+  flex: 1;
+  width: 100%;
+  padding: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Bouton pour ouvrir la sidebar */
+.toggle-sidebar-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #72D7FF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(114, 215, 255, 0.6);
+  z-index: 10;
+}
+
+
+.toggle-sidebar-btn:hover {
+  transform: scale(1.1);
+}
+
+
+/* Bouton pour fermer la sidebar */
+.close-sidebar-btn {
+  align-self: flex-start;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-sidebar-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Bouton pour rouvrir la sidebar (initialement caché) */
+.hidden {
+  display: none;
+}
+/* ✅ Ajustement de la mise en page pour mobile */
+@media (max-width: 768px) {
+  /* Conteneur principal */
+  .chat-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Sidebar : devient plein écran sur mobile */
+  .sidebar {
+    width: 100%;
+    height: 100vh;
+    left: -100%; /* Complètement cachée */
+  }
+
+  .sidebar-open .sidebar {
+    left: 0;
+  }
+
+  /* Ajustement du chatbot pour laisser la place à la sidebar */
+  .chat-container.sidebar-open .chatbot {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  /* Boutons */
+  .toggle-sidebar-btn {
+    width: auto;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .close-sidebar-btn {
+    align-self: center;
+  }
+
+  /* Messages */
+  .messages {
+    height: 60vh;
+    padding: 10px;
+  }
+
+  /* Champ de saisie */
+  .input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #userInput {
+    width: 90%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  #sendBtn {
+    width: 90%;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* ✅ Optimisation pour les tablettes */
+@media (max-width: 1024px) {
+  .chat-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 280px;
+  }
+
+  .chat-container.sidebar-open .chatbot {
+    width: calc(100% - 280px);
+  }
+}
+
+/* ✅ Gestion des très grands écrans */
+@media (min-width: 1440px) {
+  .chatbot {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .messages {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .input-area {
+    max-width: 800px;
+    margin: auto;
+  }
+}
