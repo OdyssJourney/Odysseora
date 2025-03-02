@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aides & Subventions - Odyss</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="hero">
+  <h1>Trouvez vos <span>Aides & Subventions</span></h1>
+  <p>Accédez aux meilleures aides pour booster votre projet</p>
+
+  <div class="filters">
+    <input type="text" id="searchInput" placeholder="🔍 Recherchez une aide...">
+    <button onclick="searchAides()">Rechercher</button>
+  </div>
+</div>
+
+<section id="results" class="results">
+  <!-- Cartes dynamiques générées ici -->
+</section>
+
+<div class="sidebar">
+  <h3>Aides Sélectionnées</h3>
+  <div id="selectedAides"></div>
+</div>
+
+<div class="chatbot">
+    💬 Besoin d'aide ?
+  </div>
+  
+
+<script src="script.js"></script>
+</body>
+</html>

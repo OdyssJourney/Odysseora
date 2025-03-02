@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #1E1E2E;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 1.5s ease;
+  }
+  
+  h1 span {
+    background: linear-gradient(90deg, #72D7FF, #A1FFCE);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: neonGlow 3s infinite alternate;
+  }
+  
+  .filters {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  input, button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background: #72D7FF;
+    box-shadow: 0 0 15px #72D7FF;
+    cursor: pointer;
+  }
+  
+  .results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px;
+    opacity: 0;
+    animation: slideUp 1.5s ease forwards;
+  }
+  
+  .aide-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    border-radius: 20px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .aide-card:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 10px 40px rgba(114, 215, 255, 0.5);
+  }
+  
+  .sidebar {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    background: rgba(30, 30, 46, 0.9);
+    backdrop-filter: blur(20px);
+    box-shadow: -10px 0 30px rgba(114, 215, 255, 0.2);
+    padding: 20px;
+    transition: right 0.8s ease;
+  }
+  
+  .sidebar.open {
+    right: 0;
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes neonGlow {
+    from { text-shadow: 0 0 10px #72D7FF; }
+    to { text-shadow: 0 0 25px #A1FFCE; }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .chatbot {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #72D7FF;
+    padding: 15px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(114, 215, 255, 0.5);
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .aide-card:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 10px 40px rgba(114, 215, 255, 0.5);
+    background: rgba(114, 215, 255, 0.1);
+    transition: 0.4s ease-out;
+  }
+  
