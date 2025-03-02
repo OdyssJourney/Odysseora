@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyss - Conformité Galactique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Effet de chargement cosmique -->
+    <div id="loading-screen">
+        <pre id="terminal-text"></pre>
+    </div>
+
+    <!-- Effet néon autour -->
+    <div class="glow-frame"></div>
+
+    <!-- Barre de navigation futuriste -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" class="nav-link active" data-target="dashboard">🏠 Dashboard</a></li>
+            <li><a href="#" class="nav-link" data-target="odyss-chat">🤖 Odyss Chat</a></li>
+            <li><a href="#" class="nav-link" data-target="aides">💰 Aides</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 class="title-glow">🔍 Analyse de Conformité Galactique</h1>
+    </header>
+
+    <main>
+        <!-- Barre de progression cosmique -->
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <!-- Résultats de l'analyse -->
+        <section id="analysis-results">
+            <div id="odyssey-animation" class="hidden">
+                <h1>🚀 Voyage réussi dans l’hyperespace !</h1>
+                <p class="success-text">Toutes les normes sont respectées. Vous êtes prêt pour l’Odyssée 🌌✨</p>
+            </div>
+
+            <div id="non-conform-cards" class="hidden">
+                <h2 class="error-title">⚠️ Anomalies détectées</h2>
+                <div id="issue-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
