@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "@supabase/auth-ui-react": "^0.4.7",
+    "@supabase/auth-ui-shared": "^0.1.8",
+    "@supabase/supabase-js": "^2.49.1",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodejs": "^0.0.0",
+    "nodemon": "^3.1.9",
+    "openai": "^4.86.2",
+    "react-router-dom": "^7.2.0",
+    "socket.io": "^4.8.1",
+    "supabase": "^2.15.8",
+    "vite": "^6.2.0"
+  },
+  "name": "odysseora",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OdyssJourney/Odysseora.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/OdyssJourney/Odysseora/issues"
+  },
+  "homepage": "https://github.com/OdyssJourney/Odysseora#readme"
+}
